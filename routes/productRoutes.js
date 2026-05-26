@@ -3,10 +3,14 @@ const express = require("express");
 const router = express.Router();
 
 const {
-  getAllProducts,
+  getProductsPage,
+  addProduct,
 } = require("../controllers/productController");
 
 // GET Route
-router.get("/", getAllProducts);
+router.get("/", getProductsPage);
+
+// POST Route
+router.post("/", addProduct);
 
 module.exports = router;

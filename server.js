@@ -4,12 +4,14 @@ const app = express();
 
 app.use(express.json());
 
-// Routes
-const productRoutes = require("./routes/productRoutes");
+// STATIC FOLDER
+app.use(express.static("public"));
+
+const productRoutes =
+  require("./routes/productRoutes");
 
 app.use("/api/products", productRoutes);
 
-// Home Route
 app.get("/", (req, res) => {
   res.send("Welcome to Ecommerce API");
 });
@@ -17,5 +19,9 @@ app.get("/", (req, res) => {
 const PORT = 3000;
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+
+  console.log(
+    `Server running on port ${PORT}`
+  );
+
 });

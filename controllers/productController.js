@@ -1,12 +1,11 @@
 const path = require("path");
 
 const {
-  getAllProductsService,
+  addProductService,
 } = require("../services/productService");
 
-const getAllProducts = (req, res) => {
-
-  console.log(getAllProductsService());
+// GET Controller
+const getProductsPage = (req, res) => {
 
   res.sendFile(
     path.join(__dirname, "../VIEW/products.html")
@@ -14,6 +13,21 @@ const getAllProducts = (req, res) => {
 
 };
 
+// POST Controller
+const addProduct = (req, res) => {
+
+  const { productName } = req.body;
+
+  console.log(productName);
+
+  const result =
+    addProductService(productName);
+
+  res.send(result);
+
+};
+
 module.exports = {
-  getAllProducts,
+  getProductsPage,
+  addProduct,
 };

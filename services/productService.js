@@ -1,9 +1,9 @@
-const getAllProductsService = () => {
+const addProductService = (productName) => {
 
-    return "Fetching All Products";
+    return `Product Added: ${productName}`;
   
   };
   
   module.exports = {
-    getAllProductsService,
+    addProductService,
   };
