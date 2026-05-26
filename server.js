@@ -4,10 +4,9 @@ const app = express();
 
 app.use(express.json());
 
-// Import Routes
+// Routes
 const productRoutes = require("./routes/productRoutes");
 
-// Routes
 app.use("/api/products", productRoutes);
 
 // Home Route

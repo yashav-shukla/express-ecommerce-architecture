@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Products</title>
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Products Form</title>
 
   <style>
 
@@ -16,31 +18,82 @@
       align-items:center;
       background:#0f172a;
       font-family:Arial;
-      color:white;
     }
 
-    .card{
+    .container{
       background:#1e293b;
       padding:40px;
       border-radius:12px;
-      text-align:center;
+      width:350px;
+      color:white;
       box-shadow:0 0 20px rgba(0,0,0,0.3);
     }
 
     h1{
+      text-align:center;
       color:#22c55e;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    label{
+      font-size:18px;
+    }
+
+    input{
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      outline:none;
+      font-size:16px;
+    }
+
+    button{
+      padding:12px;
+      border:none;
+      border-radius:8px;
+      background:#22c55e;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#16a34a;
     }
 
   </style>
 
 </head>
+
 <body>
 
-  <div class="card">
+  <div class="container">
 
     <h1>Fetching All Products</h1>
 
-    <p>Welcome to Ecommerce API 🚀</p>
+    <form>
+
+      <label for="product">
+        Product Name
+      </label>
+
+      <input
+        type="text"
+        id="product"
+        name="productName"
+        placeholder="Enter Product Name"
+      />
+
+      <button type="submit">
+        Add Product
+      </button>
+
+    </form>
 
   </div>
 
